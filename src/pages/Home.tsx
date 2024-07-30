@@ -1,7 +1,7 @@
 import LinkButton from "../components/button";
 import { getCurrentAge } from "../service/utils/date"
 import { useTitleChanger } from "../service/customHooks/useTitleChanger"
-import { CV_URL, PROJECT_URL } from "../constant/urls";
+import { CV_URL, HOBBY_URL, PROJECT_URL } from "../constant/urls";
 
 export default function Home({title}: {title: string}) {
   const age = getCurrentAge();
@@ -22,7 +22,7 @@ export default function Home({title}: {title: string}) {
         <div className="grid grid-cols-3 px-9">
           <LinkButton link={PROJECT_URL}>Projecten</LinkButton>
           <LinkButton link={CV_URL}>CV</LinkButton>
-          <LinkButton link="/hobby">Hobby</LinkButton>
+          <LinkButton link={HOBBY_URL}>Hobby</LinkButton>
         </div>
       </div>
       <div className="col-span-4 row-span-3 sm:col-span-2 sm:order-1">

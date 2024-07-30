@@ -14,7 +14,7 @@ export default function footer() {
                 <p>Email:</p>
                 <p><a href={`mailto:${EMAIL_ADRESS}`}>{EMAIL_ADRESS}</a></p>
             </div>
-
+            {/* /TODO FILL with linkedin and github */}
             <div className="m-2">
                 <p>Socials:</p>
             </div>
