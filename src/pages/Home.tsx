@@ -35,7 +35,3 @@ export default function Home({title}: {title: string}) {
     </div>
   )
 };
-
-function changeTitle() {
-  throw new Error("Function not implemented.");
-}
