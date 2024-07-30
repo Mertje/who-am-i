@@ -1,15 +1,15 @@
 import LinkButton from "../components/button";
 import { getCurrentAge } from "../service/utils/date"
 import { useTitleChanger } from "../service/customHooks/useTitleChanger"
-import { CV_URL, HOBBY_URL, PROJECT_URL } from "../constant/urls";
+import { HOBBY_TITLE, HOBBY_URL, PROJECT_TITLE, PROJECT_URL, SKILLS_TITLE, SKILLS_URL } from "../constant/pageInfo";
 
-export default function Home({title}: {title: string}) {
+export default function Home({ title }: { title: string }) {
   const age = getCurrentAge();
   useTitleChanger(title)
 
   return (
     <div className="grid grid-cols-4 justify-center py-9 animate-fadeIn flex-grow">
-      <div className="col-span-4 sm:col-span-2 ml-0 w-full lg:w-3/4 sm:order-2">
+      <div className="pb-5 col-span-4 sm:col-span-2 ml-0 w-full lg:w-3/4 sm:order-2">
         <div className="px-9 py-2">
           <p className="font-bold text-6xl pt-3">Hallo</p>
           <p className="font-semibold text-3xl pt-4">Over Mij</p>
@@ -20,9 +20,9 @@ export default function Home({title}: {title: string}) {
           </p>
         </div>
         <div className="grid grid-cols-3 px-9">
-          <LinkButton link={PROJECT_URL}>Projecten</LinkButton>
-          <LinkButton link={CV_URL}>CV</LinkButton>
-          <LinkButton link={HOBBY_URL}>Hobby</LinkButton>
+          <LinkButton link={PROJECT_URL}>{PROJECT_TITLE}</LinkButton>
+          <LinkButton link={SKILLS_URL}>{SKILLS_TITLE}</LinkButton>
+          <LinkButton link={HOBBY_URL}>{HOBBY_TITLE}</LinkButton>
         </div>
       </div>
       <div className="col-span-4 row-span-3 sm:col-span-2 sm:order-1">
