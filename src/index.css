@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+      font-family: 'worksans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/WorkSans.ttf) format('ttf');
+    }
+
+    p {
+     @apply text-gray-900;
+    }
+  }
+
+  
