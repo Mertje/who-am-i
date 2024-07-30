@@ -8,7 +8,7 @@ export default function Home({ title }: { title: string }) {
   useTitleChanger(title)
 
   return (
-    <div className="grid grid-cols-4 justify-center py-9 animate-fadeIn flex-grow">
+    <div className="grid grid-cols-4 justify-center py-9 animate-fadeIn flex-grow sm:w-9/12 sm:mx-auto">
       <div className="pb-5 col-span-4 sm:col-span-2 ml-0 w-full lg:w-3/4 sm:order-2">
         <div className="px-9 py-2">
           <p className="font-bold text-6xl pt-3">Hallo</p>
@@ -20,8 +20,8 @@ export default function Home({ title }: { title: string }) {
           </p>
         </div>
         <div className="grid grid-cols-3 px-9">
-          <LinkButton link={PROJECT_URL}>{PROJECT_TITLE}</LinkButton>
           <LinkButton link={SKILLS_URL}>{SKILLS_TITLE}</LinkButton>
+          <LinkButton link={PROJECT_URL}>{PROJECT_TITLE}</LinkButton>
           <LinkButton link={HOBBY_URL}>{HOBBY_TITLE}</LinkButton>
         </div>
       </div>
