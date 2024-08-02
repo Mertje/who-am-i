@@ -8,7 +8,7 @@ export default function DetailedInformation({ title }: { title: string }) {
   return (
     <div className="py-9 px-9 animate-fadeIn sm:w-9/12 sm:mx-auto">
       <p className="font-bold text-6xl pt-3">{SKILLS_TITLE}</p>
-      <div className="grid grid-cols-3 pt-14">
+      <div className="md:grid md:grid-cols-3 pt-14">
         <div>
           <p className="text-2xl font-bold">Werkervaring</p>
         </div>
@@ -44,12 +44,12 @@ export default function DetailedInformation({ title }: { title: string }) {
           </InfoCard>
         </div>
       </div>
-      <div className="grid grid-cols-2 pt-14 border-t-2">
+      <div className="md:grid md:grid-cols-2 pt-14 border-t-2">
         <div>
           <p className="text-2xl font-bold">Vaardigheden</p>
         </div>
         <div>
-          <ul className="list-disc">
+          <ul className="pl-10 md:pl-0 list-disc">
             <li>JavaScript (Typescript)</li>
             <li>Java (Spring Boot, Jakarta EE)</li>
             <li>NodeJS (React/Next, Vue, Express, Nest, jQuery)</li>
