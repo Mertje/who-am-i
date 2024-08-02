@@ -14,14 +14,19 @@ export default function InfoCard({ children, companyName, period }: InfoCard) {
       </div>
       <div className="md:w-2/3 pb-10">
         <p className="font-bold">{companyName}</p>
-        <p className={`${showMore ? "h-24 overflow-hidden overflow-ellipsis whitespace-normal" : ""}`}>
+        <p className={`${showMore ? "h-24 overflow-hidden overflow-ellipsis whitespace-normal" : "pb-3"}`}>
           {children}
         </p>
 
-        <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
-
+        {showMore ? (
+          <svg onClick={handleToggle} className="size-6" data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        ) : (
+          <svg onClick={handleToggle} className="size-6" data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        )}
       </div>
     </div>
   );
