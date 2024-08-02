@@ -13,4 +13,4 @@ export const PROJECT_TITLE = "Projecten";
 
 export const HOBBY_TITLE = "Hobby";
 
-export const SKILLS_TITLE = "Vaardigheden";
+export const SKILLS_TITLE = "CV";
