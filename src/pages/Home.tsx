@@ -21,8 +21,11 @@ export default function Home({ title }: { title: string }) {
         </div>
         <div className="grid grid-cols-3 px-9">
           <LinkButton link={SKILLS_URL}>{SKILLS_TITLE}</LinkButton>
-          {/* <LinkButton link={PROJECT_URL}>{PROJECT_TITLE}</LinkButton>
-          <LinkButton link={HOBBY_URL}>{HOBBY_TITLE}</LinkButton> */}
+          {/* TODO Fix fill the other links or remove them */}
+          <div className="hidden">
+            <LinkButton link={PROJECT_URL}>{PROJECT_TITLE}</LinkButton>
+            <LinkButton link={HOBBY_URL}>{HOBBY_TITLE}</LinkButton>
+          </div>
         </div>
       </div>
       <div className="col-span-4 row-span-3 sm:col-span-2 sm:order-1">
